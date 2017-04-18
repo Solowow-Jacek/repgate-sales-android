@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.repgate.sales.ui.activities.CommunicateActivity">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/userInfoLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <com.repgate.sales.view.RoundedImageView
+                    android:id="@+id/imgPicture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/doctor"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kaiser"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:imeOptions="actionNext" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/contentSpecialty"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtSpecialtyHeader"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:text="Specialty:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:gravity="left"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/txtSpecialty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:minLines="1"
+                        android:imeOptions="actionNext"
+                        android:gravity="left"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contentInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtInterestHeader"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:text="Area of Interest:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:gravity="left"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/txtInterest"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:maxLines="3"
+                        android:imeOptions="actionNext"
+                        android:gravity="left"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/btnUnJoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        fbutton:buttonColor="@color/mdtp_white"
+                        fbutton:shadowColor="@color/darker_gray"
+                        fbutton:shadowEnabled="true"
+                        fbutton:shadowHeight="2dp"
+                        fbutton:cornerRadius="5dp"
+                        android:text="UNJOIN USER"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:drawableLeft="@mipmap/icon_join_doctor_gray_padding1"
+                        android:drawableRight="@mipmap/pink_chevron_small"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/btnProviders"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        fbutton:buttonColor="@color/mdtp_white"
+                        fbutton:shadowColor="@color/darker_gray"
+                        fbutton:shadowEnabled="true"
+                        fbutton:shadowHeight="2dp"
+                        fbutton:cornerRadius="5dp"
+                        android:text="HEALTHCARE PROVIDERS"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:drawableLeft="@mipmap/icon_doctor_gray_padding1"
+                        android:drawableRight="@mipmap/pink_chevron_small"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/btnMessages"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        fbutton:buttonColor="@color/mdtp_white"
+                        fbutton:shadowColor="@color/darker_gray"
+                        fbutton:shadowEnabled="true"
+                        fbutton:shadowHeight="2dp"
+                        fbutton:cornerRadius="5dp"
+                        android:text="@string/send_message"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:drawableLeft="@mipmap/icon_messege_gray_padding1"
+                        android:drawableRight="@mipmap/pink_chevron_small"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/btnRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        fbutton:buttonColor="@color/mdtp_white"
+                        fbutton:shadowColor="@color/darker_gray"
+                        fbutton:shadowEnabled="true"
+                        fbutton:shadowHeight="2dp"
+                        fbutton:cornerRadius="5dp"
+                        android:text="@string/send_request"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:drawableLeft="@mipmap/icon_request_gray_padding1"
+                        android:drawableRight="@mipmap/pink_chevron_small"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

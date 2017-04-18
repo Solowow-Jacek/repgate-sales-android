@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.3'
+
+    defaultConfig {
+        applicationId "com.repgate.sales"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 15
+        versionName "3.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.hotchemi:stringpicker:0.0.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.android.gms:play-services-gcm:9.0.1'
+    apply plugin: 'com.google.gms.google-services'
+    compile 'com.github.tibolte:agendacalendarview:1.0.4'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile 'com.wdullaer:materialdatetimepicker:2.3.0'
+    compile 'com.kyleduo.switchbutton:library:1.4.0'
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    compile 'com.nightonke:boommenu:2.0.2'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.github.ceryle:RadioRealButton:v1.4.5'
+    compile('io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.4') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+    compile 'com.thefinestartist:ytpa:1.2.1'
+    compile 'com.github.gfranks.collapse.calendar:com.github.gfranks.collapse.calendar-1.0@aar'
+    compile 'net.danlew:android.joda:2.9.5.1'
+}

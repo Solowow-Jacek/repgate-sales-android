@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_request_white_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <com.repgate.sales.view.RoundedImageView
+            android:id="@+id/imgPicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/doctor"
+            android:scaleType="centerInside"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMessageSender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:maxLength="20"
+                android:text="ttt"/>
+
+            <TextView
+                android:id="@+id/txtMessageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:maxLength="20"
+                android:text="ddd"/>
+
+            <TextView
+                android:id="@+id/txtMessageBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:maxLength="20"
+                android:text="aaa"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtMessageDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/blue_selected"
+                android:textSize="15sp"
+                android:text="2016-01-08"
+                android:maxLines="1"
+                android:minLines="1"
+                android:gravity="center|top"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/pink_chevron_small"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtMessageDate"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/missed_messages"
+        android:background="@mipmap/history_chat_indicator"
+        style="@style/font18"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context=".ui.activities.MainActivity">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="64dp"
+        android:paddingTop="64dp">
+
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:id="@+id/btnSchedule"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="65dp"-->
+            <!--fbutton:buttonColor="@color/btn_shadow_color"-->
+            <!--fbutton:shadowColor="@color/btn_color"-->
+            <!--fbutton:shadowEnabled="true"-->
+            <!--fbutton:shadowHeight="2dp"-->
+            <!--fbutton:cornerRadius="5dp"-->
+            <!--android:drawableLeft="@mipmap/icon_schedule_padding"-->
+            <!--android:text="SCHEDULE"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textAlignment="textStart"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:drawableRight="@mipmap/arrow_right"-->
+            <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_alignParentTop="true"/>-->
+
+        <LinearLayout
+            android:id="@+id/menuLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_marginRight="8dp">
+
+                    <Button
+                        android:id="@+id/btnJoin"
+                        android:layout_width="match_parent"
+                        android:layout_weight="4"
+                        android:layout_height="0dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        android:textAlignment="gravity"
+                        android:background="@mipmap/sales_join"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:text="@string/join"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp">
+
+                    <Button
+                        android:id="@+id/btnHealthCareProviders"
+                        android:layout_width="match_parent"
+                        android:layout_weight="4"
+                        android:layout_height="0dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        android:textAlignment="inherit"
+                        android:background="@mipmap/sales_users" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:text="@string/my_officers"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:id="@+id/msg"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <Button
+                            android:id="@+id/btnMessagesShares"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:textAllCaps="true"
+                            android:textAlignment="gravity"
+                            android:background="@mipmap/sales_rep_mymessage"
+                            android:paddingLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:text="@string/messages_shares"
+                            android:background="@android:color/darker_gray" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/msg_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:id="@+id/missed_msgs"
+                        android:background="@mipmap/history_chat_indicator"
+                        style="@style/font18"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="3dp"
+                        android:text="5"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/req"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnRequests"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:textAllCaps="true"
+                            android:textAlignment="gravity"
+                            android:background="@mipmap/sales_request"
+                            android:paddingLeft="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:text="@string/requests"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/req_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:id="@+id/missed_reqs"
+                        android:background="@mipmap/history_chat_indicator"
+                        style="@style/font18"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="3dp"
+                        android:textAlignment="center"
+                        android:text="5"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_marginRight="8dp">
+
+                    <Button
+                        android:id="@+id/btnTutorial"
+                        android:layout_width="match_parent"
+                        android:layout_weight="4"
+                        android:layout_height="0dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        android:textAlignment="gravity"
+                        android:background="@mipmap/repgate_tutorial" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:text="@string/tutorials"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp">
+
+                    <Button
+                        android:id="@+id/btnProfile"
+                        android:layout_width="match_parent"
+                        android:layout_weight="4"
+                        android:layout_height="0dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        android:textAlignment="gravity"
+                        android:background="@mipmap/sales_profile" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:text="@string/profile"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<com.nightonke.boommenu.BoomMenuButton-->
+            <!--android:id="@+id/bmb"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:bmb_buttonEnum="ham"-->
+            <!--app:bmb_piecePlaceEnum="piecePlace_ham_3"-->
+            <!--app:bmb_buttonPlaceEnum="buttonPlace_sc_3_1"-->
+            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"/>-->
+
+    </RelativeLayout>
+
+    <!--<include layout="@layout/layout_actiontabbar" />-->
+
+</LinearLayout>

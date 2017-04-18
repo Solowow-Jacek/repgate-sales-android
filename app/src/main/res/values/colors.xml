@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#168c93</color>
+    <color name="colorPrimaryDark">#116d73</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="tabbar_color">#000000</color>
+    <color name="tabbar_selected">#4fffffff</color>
+
+    <color name="orange_dark">#E64A19</color>
+    <color name="blue_dark">@android:color/holo_blue_dark</color>
+    <color name="darker_gray">@android:color/darker_gray</color>
+    <color name="alert_color">#F5A623</color>
+    <color name="green">#81C784</color>
+    <color name="red">#E57373</color>
+    <color name="yellow">#FFF176</color>
+    <color name="blue">#64B5F6</color>
+    <color name="gray">#E0E0E0</color>
+
+    <color name="btn_color">#168c93</color>
+    <color name="btn_shadow_color">#116d73</color>
+    <color name="background_color">#e8efef</color>
+    <color name="font_color">#2e3641</color>
+    <color name="ham_button_color">#337ab7</color>
+</resources>

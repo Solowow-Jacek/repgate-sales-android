@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.repgate.sales">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.repgate.sales.permission.C2D_MESSAGE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".AppRepgate"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.SalesGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.SalesInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.RegistrationIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.HealthcareProviderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ProvidersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CommunicateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MessagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CreateMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ShowMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CreateRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.RequestsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MyMessagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MyRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ShowRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activities.JoinActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activities.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d37898bef70339620f6285eb320517e35b5e54e0" />
+
+        <activity
+            android:name="com.thefinestartist.ytpa.YouTubePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.NoTitleBar.OverlayActionModes" />
+
+        <activity android:name=".ui.activities.TutorialsActivity" />
+        <activity android:name=".ui.activities.ShowTutorialActivity"></activity>
+
+        <meta-data
+            android:name="com.thefinestartist.ytpa.YouTubePlayerActivity.ApiKey"
+            android:value="AIzaSyDGWzpWigZintQTSEIe7Jizka7JQXG5XEk" />
+    </application>
+
+</manifest>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.repgate.doctor.ui.activities.TutorialsActivity">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:src="@mipmap/physician_photo"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:layout_margin="1dp"/>-->
+    <FrameLayout
+        android:id="@+id/youtubeContent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnMessaging"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            fbutton:buttonColor="@color/mdtp_white"
+            fbutton:shadowColor="@color/darker_gray"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="2dp"
+            fbutton:cornerRadius="5dp"
+            android:text="MESSAGING"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:drawableLeft="@mipmap/icon_messege_gray_padding1"
+            android:drawableRight="@mipmap/pink_chevron_small"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnRequesting"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            fbutton:buttonColor="@color/mdtp_white"
+            fbutton:shadowColor="@color/darker_gray"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="2dp"
+            fbutton:cornerRadius="5dp"
+            android:text="REQUESTING"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:drawableLeft="@mipmap/icon_request_gray_padding1"
+            android:drawableRight="@mipmap/pink_chevron_small"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    </LinearLayout>
+</LinearLayout>
+

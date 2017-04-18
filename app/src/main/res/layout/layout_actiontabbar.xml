@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center|center_vertical"
+    android:background="@color/tabbar_color"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_header_fragHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_messege"
+            android:background="@drawable/tab_btn_bg"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="5dp"
+            android:text="@string/create_message"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:clickable="true" />
+
+        <RadioButton
+            android:id="@+id/rbRequest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_request"
+            android:background="@drawable/tab_btn_bg"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="5dp"
+            android:text="@string/create_request"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:clickable="true" />
+
+        <RadioButton
+            android:id="@+id/rbSchedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_schedule"
+            android:background="@drawable/tab_btn_bg"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="5dp"
+            android:text="@string/schedule"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:clickable="true" />
+    </RadioGroup>
+</LinearLayout>

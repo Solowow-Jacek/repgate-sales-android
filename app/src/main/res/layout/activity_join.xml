@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    tools:context="com.repgate.sales.ui.activities.JoinActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_actionbar"/>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Please input medical office or healthcare provider CODE."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtAmountHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Due: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$5.00"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:hint="User Code"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10dp"
+        android:inputType="textCapCharacters"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:imeOptions="actionSend" />
+
+    <EditText
+        android:id="@+id/edtCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDescription"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:hint="Card Number *"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:imeOptions="actionSend" />
+
+    <EditText
+        android:id="@+id/edtCvcNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:hint="CVC Number *"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:imeOptions="actionSend" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <Spinner
+            android:id="@+id/spnExpireMonth"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black"
+            android:entries="@array/payment_month"
+            android:textSize="15sp"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+        <Spinner
+            android:id="@+id/spnExpireYear"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black"
+            android:entries="@array/payment_year"
+            android:textSize="15sp"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        fbutton:buttonColor="@color/btn_color"
+        fbutton:shadowColor="@color/btn_shadow_color"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="2dp"
+        fbutton:cornerRadius="5dp"
+        android:text="@string/join"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:background="@mipmap/psychology_photo_home"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/edtCode"/>
+
+</LinearLayout>
